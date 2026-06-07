@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "teaching": "Insegnamento",
+    "scholarship": "Ricerca",
+    "consulting": "Consulenza",
+    "service": "Servizio",
+    "photography": "Fotografia",
+    "poems": "Poesie del Cuore",
+    "contact": "Contatto"
+  },
+  "home": {
+    "hero_title": "Dr.ssa Stacy A.S. Williams",
+    "hero_subtitle": "Professoressa Associata di Psicologia | Psicologa Abilitata | Esperta in Psicologia Scolastica",
+    "hero_body": "Oltre due decenni di esperienza nel rafforzare le capacita degli insegnanti e migliorare i risultati degli studenti attraverso pratiche basate sull'evidenza.",
+    "cta_primary": "Esplora il Mio Lavoro",
+    "cta_secondary": "Contattami",
+    "about_heading": "Chi e la Dr.ssa Williams",
+    "about_body": "La Dr.ssa Stacy A.S. Williams e Professoressa Associata di Psicologia all'Universita Marist, psicologa abilitata e psicologa scolastica certificata. E un'esperta riconosciuta a livello nazionale in psicologia scolastica, MTSS e RTI.",
+    "expertise_heading": "Aree di Competenza",
+    "expertise_items": [
+      "Sistemi di Supporto Multi-livello (MTSS)",
+      "Risposta all'Intervento (RTI)",
+      "Processo Decisionale Basato sui Dati",
+      "Interventi Accademici e Comportamentali",
+      "Partenariati Scuola-Universita",
+      "Giustizia Sociale nell'Istruzione"
+    ],
+    "credentials_heading": "Credenziali",
+    "contact_cta_heading": "Connettiamoci",
+    "contact_cta_body": "Interessato a consulenza, collaborazione nella ricerca o sviluppo professionale? Contattaci."
+  },
+  "teaching": {
+    "page_title": "Insegnamento",
+    "intro": "L'insegnamento efficace richiede conoscenza approfondita, organizzazione solida, comunicazione chiara, entusiasmo genuino, rapporto con gli studenti e valutazione equa.",
+    "philosophy_heading": "Filosofia Didattica",
+    "philosophy_body": "L'approccio della Dr.ssa Williams e guidato da pratiche basate sulla ricerca e informato da studi sulle negoziazioni identitarie delle donne di colore nel mondo accademico.",
+    "courses_heading": "Corsi Tenuti",
+    "marist_heading": "Universita Marist (2013 - Oggi)",
+    "graduate_label": "Livello Magistrale",
+    "undergraduate_label": "Livello Triennale",
+    "albany_heading": "Universita di Albany (2005 - 2013)",
+    "other_heading": "Altri Corsi"
+  },
+  "scholarship": {
+    "page_title": "Ricerca",
+    "intro": "La Dr.ssa Williams concentra il suo lavoro accademico all'intersezione tra formazione, insegnamento e consulenza applicata.",
+    "articles_heading": "Articoli di Riviste",
+    "chapters_heading": "Capitoli di Libri",
+    "newsletters_heading": "Articoli di Newsletter",
+    "encyclopedia_heading": "Voci di Enciclopedia",
+    "presentations_heading": "Presentazioni Professionali",
+    "positions_heading": "Dichiarazioni di Posizione"
+  },
+  "consulting": {
+    "page_title": "Consulenza",
+    "intro": "La Dr.ssa Williams offre servizi di sviluppo professionale e consulenza a distretti scolastici, universita e organizzazioni educative.",
+    "services_heading": "Temi di Formazione",
+    "clients_heading": "Clienti Selezionati",
+    "approach_heading": "Approccio alla Consulenza"
+  },
+  "service": {
+    "page_title": "Servizio",
+    "intro": "La Dr.ssa Williams e impegnata a servire la comunita di psicologia scolastica attraverso ruoli di leadership in organizzazioni professionali nazionali e regionali.",
+    "professional_heading": "Servizio Professionale",
+    "community_heading": "Coinvolgimento della Comunita",
+    "quote": "Possiamo sempre scegliere, in ogni momento della nostra vita, tra la via dell'egoismo e quella dell'amore.",
+    "quote_attribution": "Chiara Lubich"
+  },
+  "photography": {
+    "page_title": "Fotografia",
+    "intro": "La fotografia e sia un'uscita creativa che una forma di autocura per la Dr.ssa Williams.",
+    "gallery_heading": "Galleria",
+    "ai_note": "Alcune opere sono reinterpretazioni potenziate dall'IA di fotografie originali."
+  },
+  "poems": {
+    "page_title": "Poesie del Cuore",
+    "intro": "\"Scrivo dall'emozione. Quando la rabbia brucia o la tristezza persiste, la mia penna diventa la mia liberazione.\"",
+    "wrestling_heading": "Lottando con la Dissonanza",
+    "love_heading": "Poesie d'Amore",
+    "celebrating_heading": "Celebrando gli Altri",
+    "read_poem": "Leggi la Poesia"
+  },
+  "contact": {
+    "page_title": "Contatto",
+    "intro": "La Dr.ssa Williams accoglie richieste di consulenza, conferenze, collaborazione nella ricerca e sviluppo professionale.",
+    "form_name": "Nome Completo",
+    "form_email": "Indirizzo Email",
+    "form_subject": "Oggetto",
+    "form_message": "Messaggio",
+    "form_submit": "Invia Messaggio",
+    "form_sending": "Invio in corso...",
+    "form_success": "Grazie! Il tuo messaggio e stato inviato. La Dr.ssa Williams ti contaktera presto.",
+    "form_error": "Qualcosa e andato storto. Riprova o invia un'email direttamente.",
+    "office_heading": "Informazioni Ufficio",
+    "office_address": "Dyson Hall 3058, Universita Marist, Poughkeepsie, NY 12601",
+    "office_phone": "(845) 575-3000 ext. 2677",
+    "office_email": "Stacy.Williams@marist.edu"
+  },
+  "footer": {
+    "tagline": "Professoressa Associata di Psicologia | Universita Marist",
+    "rights": "Tutti i diritti riservati.",
+    "nav_label": "Link Rapidi",
+    "social_label": "Collegati"
+  }
+}

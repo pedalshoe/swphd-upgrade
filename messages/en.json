@@ -1,0 +1,106 @@
+{
+  "nav": {
+    "home": "Home",
+    "teaching": "Teaching",
+    "scholarship": "Scholarship",
+    "consulting": "Consulting",
+    "service": "Service",
+    "photography": "Photography",
+    "poems": "Poems of the Heart",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero_title": "Dr. Stacy A.S. Williams",
+    "hero_subtitle": "Associate Professor of Psychology | Licensed Psychologist | School Psychology Expert",
+    "hero_body": "Over two decades of experience strengthening educator capacity and improving student outcomes through evidence-based, data-informed practices.",
+    "cta_primary": "Explore My Work",
+    "cta_secondary": "Get in Touch",
+    "about_heading": "About Dr. Williams",
+    "about_body": "Dr. Stacy A.S. Williams is an Associate Professor of Psychology at Marist University, a licensed psychologist, and a certified school psychologist. She is a nationally recognized expert in school psychology, Multi-Tiered Systems of Supports (MTSS), and Response to Intervention (RTI).",
+    "expertise_heading": "Areas of Expertise",
+    "expertise_items": [
+      "Multi-Tiered Systems of Supports (MTSS)",
+      "Response to Intervention (RTI)",
+      "Data-Based Decision Making",
+      "Academic and Behavioral Interventions",
+      "School-University Partnerships",
+      "Social Justice in Education"
+    ],
+    "credentials_heading": "Credentials",
+    "contact_cta_heading": "Let's Connect",
+    "contact_cta_body": "Interested in consulting, research collaboration, or professional development? Reach out."
+  },
+  "teaching": {
+    "page_title": "Teaching",
+    "intro": "Effective teaching requires deep knowledge, strong organization, clear communication, genuine enthusiasm, rapport with students, and fair evaluation. Dr. Williams is committed to creating inclusive classrooms that develop the whole learner, academically, socially, and personally.",
+    "philosophy_heading": "Teaching Philosophy",
+    "philosophy_body": "Dr. Williams' approach to teaching is guided by research-based practices and informed by scholarship on the identity negotiations of women of color in academia, examining how race, gender, class, and culture intersect in educational spaces.",
+    "courses_heading": "Courses Taught",
+    "marist_heading": "Marist University (2013 - Present)",
+    "graduate_label": "Graduate Level",
+    "undergraduate_label": "Undergraduate Level",
+    "albany_heading": "University at Albany (2005 - 2013)",
+    "other_heading": "Additional Courses"
+  },
+  "scholarship": {
+    "page_title": "Scholarship",
+    "intro": "Dr. Williams centers her scholarly work at the intersection of training, teaching, and applied consultation, promoting student success, well-being, and sustainable systems-level improvement.",
+    "articles_heading": "Journal Articles",
+    "chapters_heading": "Book Chapters",
+    "newsletters_heading": "Newsletter Articles",
+    "encyclopedia_heading": "Encyclopedia Entries",
+    "presentations_heading": "Professional Presentations",
+    "positions_heading": "Position Statements"
+  },
+  "consulting": {
+    "page_title": "Consulting",
+    "intro": "Dr. Williams provides professional development and consulting services to school districts, universities, and educational organizations. Her work emphasizes diversity, equity, and inclusion frameworks alongside evidence-based instructional practices.",
+    "services_heading": "Training Topics",
+    "clients_heading": "Selected Clients",
+    "approach_heading": "Consulting Approach"
+  },
+  "service": {
+    "page_title": "Service",
+    "intro": "Dr. Williams is committed to serving the broader school psychology community through leadership roles in national and regional professional organizations.",
+    "professional_heading": "Professional Service",
+    "community_heading": "Community Involvement",
+    "quote": "We can always choose, in every moment of our life, between the way of selfishness and that of love.",
+    "quote_attribution": "Chiara Lubich"
+  },
+  "photography": {
+    "page_title": "Photography",
+    "intro": "Photography is both a creative outlet and a form of self-care for Dr. Williams. Her collection spans water, beaches, flowers, nature, people, and architecture, including recent AI-enhanced artwork using generative tools.",
+    "gallery_heading": "Gallery",
+    "ai_note": "Some works are AI-enhanced reimaginings of original photographs."
+  },
+  "poems": {
+    "page_title": "Poems of the Heart",
+    "intro": "\"I write from emotion. When anger burns or sadness lingers, my pen becomes my release.\" These collections explore conflict, love, resilience, and celebration.",
+    "wrestling_heading": "Wrestling with Dissonance",
+    "love_heading": "Love Poems",
+    "celebrating_heading": "Celebrating Others",
+    "read_poem": "Read Poem"
+  },
+  "contact": {
+    "page_title": "Contact",
+    "intro": "Dr. Williams welcomes inquiries about consulting, speaking engagements, research collaboration, and professional development.",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_subject": "Subject",
+    "form_message": "Message",
+    "form_submit": "Send Message",
+    "form_sending": "Sending...",
+    "form_success": "Thank you! Your message has been sent. Dr. Williams will be in touch soon.",
+    "form_error": "Something went wrong. Please try again or email directly.",
+    "office_heading": "Office Information",
+    "office_address": "Dyson Hall 3058, Marist University, Poughkeepsie, NY 12601",
+    "office_phone": "(845) 575-3000 ext. 2677",
+    "office_email": "Stacy.Williams@marist.edu"
+  },
+  "footer": {
+    "tagline": "Associate Professor of Psychology | Marist University",
+    "rights": "All rights reserved.",
+    "nav_label": "Quick Links",
+    "social_label": "Connect"
+  }
+}

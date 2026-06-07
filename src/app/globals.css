@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * shadcn/ui CSS custom properties mapped to the navy/gold design system.
+ * These power bg-background, text-foreground, text-primary, text-muted-foreground
+ * used by hero-section-2 and any future shadcn/ui components.
+ */
+@layer base {
+  :root {
+    --background:        250 249 246;  /* cream    #faf9f6  */
+    --foreground:        10  21  36;   /* navy-900 #0a1524  */
+    --primary:           201 151 62;   /* gold-500 #c9973e  */
+    --primary-foreground:250 249 246;
+    --muted-foreground:  55  78  111;  /* navy-600ish       */
+    --border:            213 223 240;  /* navy-100 #d5dff0  */
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-navy-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-navy-700 hover:text-navy-900 font-medium transition-colors duration-200 text-sm tracking-wide;
+  }
+
+  .nav-link-active {
+    @apply text-navy-900 border-b-2 border-gold-500;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-navy-600 text-white px-6 py-3 rounded-sm font-sans font-medium text-sm tracking-wide hover:bg-navy-700 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-navy-400 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-navy-600 text-navy-600 px-6 py-3 rounded-sm font-sans font-medium text-sm tracking-wide hover:bg-navy-50 transition-colors duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-navy-400 focus:ring-offset-2;
+  }
+
+  .section-heading {
+    @apply font-serif text-3xl md:text-4xl text-navy-800 mb-4;
+  }
+
+  .section-subheading {
+    @apply font-serif text-xl md:text-2xl text-navy-700 mb-3 mt-8;
+  }
+
+  .card {
+    @apply bg-white border border-navy-100 rounded p-6 shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+
+  .page-hero {
+    @apply bg-navy-600 text-white py-20 px-6;
+  }
+
+  .page-container {
+    @apply max-w-5xl mx-auto px-6 py-16;
+  }
+}

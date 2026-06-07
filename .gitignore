@@ -1,0 +1,71 @@
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Next.js ───────────────────────────────────────────────────────────────────
+.next/
+out/
+
+# ── Turbopack (Next.js 14 internal cache) ─────────────────────────────────────
+.turbo/
+
+# ── Environment variables ─────────────────────────────────────────────────────
+# .env.local.example is intentionally committed — it is a safe template with no real keys
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ── Build artifacts ───────────────────────────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Linting cache ─────────────────────────────────────────────────────────────
+.eslintcache
+
+# ── OS — macOS ────────────────────────────────────────────────────────────────
+# Catches .DS_Store at the root AND in every subdirectory (public/, src/, etc.)
+.DS_Store
+**/.DS_Store
+
+# ── OS — Windows ──────────────────────────────────────────────────────────────
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── Editor — VS Code ──────────────────────────────────────────────────────────
+# Ignore all local VS Code settings; commit .vscode/extensions.json manually
+# if you want to share recommended extensions with collaborators.
+.vscode/
+
+# ── Editor — JetBrains / IntelliJ ────────────────────────────────────────────
+.idea/
+*.iml
+
+# ── Editor — Vim / Emacs swap files ──────────────────────────────────────────
+*.swp
+*.swo
+*~
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ── Vercel ────────────────────────────────────────────────────────────────────
+.vercel
+
+# ── Testing (if added later) ──────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── Claude Code (local AI assistant config — machine-specific) ────────────────
+.claude/
+memory/
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+*.tgz
+.cache/
