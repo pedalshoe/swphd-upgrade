@@ -69,7 +69,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           phone:   '(845) 575-3000 ext. 2677',
           address: 'Dyson Hall 3058, Marist University',
         }}
-        className="min-h-[520px]"
+        className="min-h-0 md:min-h-[520px]"
       />
 
       {/* ── Highlights bar ────────────────────────────────────────────────── */}

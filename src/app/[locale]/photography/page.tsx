@@ -10,7 +10,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return { title: t('page_title') };
 }
 
-// Confirmed images on the existing site
+// All gallery cards — real images, same hover treatment throughout
 const galleryImages = [
   {
     src: 'https://www.stacywilliamsphd.com/uploads/1/5/9/9/15999376/editor/saswphd-20250906.jpeg',
@@ -24,16 +24,33 @@ const galleryImages = [
     alt: 'AI-Enhanced portrait of Dr. Stacy Williams',
     caption: 'AI-Enhanced Art',
     theme: 'AI-Enhanced Art',
-    href: 'ai-enhanced-art', // relative — will be prefixed with /${locale}/photography/
+    href: 'ai-enhanced-art',
+  },
+  {
+    src: '/water-and-beaches.jpg',
+    alt: 'Water and beaches photography by Dr. Stacy Williams',
+    caption: 'Water & Beaches',
+    theme: 'Nature',
+    href: null as string | null,
+  },
+  {
+    src: '/flowers-and-nature.jpg',
+    alt: 'Flowers and nature photography by Dr. Stacy Williams',
+    caption: 'Flowers & Nature',
+    theme: 'Nature',
+    href: null as string | null,
+  },
+  {
+    src: '/architecture.jpg',
+    alt: 'Architecture photography by Dr. Stacy Williams',
+    caption: 'Architecture',
+    theme: 'Architecture',
+    href: null as string | null,
   },
 ];
 
-// Remaining theme placeholders (excludes People + AI-Enhanced Art — now shown as real images)
-const placeholderThemes = [
-  { label: 'Water & Beaches', desc: 'Coastal and aquatic landscapes capturing the serenity of water.' },
-  { label: 'Flowers & Nature', desc: 'Botanical and natural world photography celebrating growth and beauty.' },
-  { label: 'Architecture', desc: 'Buildings, structures, and urban environments framed with artistic intention.' },
-];
+// No more placeholder themes needed — all five categories now have real images
+const placeholderThemes: { label: string; desc: string }[] = [];
 
 // All themes (for the "Collection Themes" reference cards at bottom)
 const themes = [
@@ -144,21 +161,6 @@ export default function PhotographyPage({ params: { locale } }: { params: { loca
               );
             })}
 
-            {/* Placeholder cards for remaining themes */}
-            {placeholderThemes.map(({ label, desc }) => (
-              <div
-                key={label}
-                className="overflow-hidden rounded border border-navy-100 bg-navy-50 shadow-sm flex flex-col"
-              >
-                <div className="h-64 bg-gradient-to-br from-navy-100 to-navy-200 flex items-center justify-center">
-                  <span className="text-navy-400 font-serif text-lg italic">{label}</span>
-                </div>
-                <div className="px-4 py-3">
-                  <p className="font-medium text-navy-700 text-sm">{label}</p>
-                  <p className="text-xs text-navy-400 mt-0.5 leading-relaxed">{desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
 
           <p className="mt-6 text-sm text-navy-400 italic">
