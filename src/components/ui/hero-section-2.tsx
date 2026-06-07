@@ -18,7 +18,7 @@ const InfoIcon = ({ type }: { type: 'website' | 'phone' | 'address' }) => {
 // ─── Prop types ───────────────────────────────────────────────────────────────
 interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   logo?: { url: string; alt: string; text?: string };
-  slogan?: string;
+  slogan?: React.ReactNode;
   title: React.ReactNode;
   subtitle: string;
   callToAction: { text: string; href: string };

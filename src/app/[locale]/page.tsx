@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslations } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
@@ -24,7 +25,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     { label: 'CSP', detail: 'Certified School Psychologist' },
   ];
 
-  const highlights = [
+  const highlights: { icon: React.ReactNode; title: string; desc: React.ReactNode }[] = [
     {
       icon: <BookOpen size={24} />,
       title: '21+ Publications',
@@ -38,7 +39,20 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     {
       icon: <BarChart3 size={24} />,
       title: 'MTSS Expert',
-      desc: 'Former Director of the NYSED MTSS-I Center; consultant to districts across New York, Connecticut, and Jamaica.',
+      desc: (
+        <>
+          Former Director of the{' '}
+          <a
+            href="https://osepartnership.org/mtss-i"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold-600 hover:text-gold-500 underline underline-offset-2 transition-colors duration-200"
+          >
+            NYSED MTSS-I Center
+          </a>
+          ; consultant to districts across New York, Connecticut, and Jamaica.
+        </>
+      ),
     },
     {
       icon: <Award size={24} />,
@@ -51,7 +65,19 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
     <>
       {/* ── Hero Section (full-height split layout with clip-path animation) ── */}
       <HeroSection
-        slogan="Associate Professor of Psychology | Marist University"
+        slogan={
+          <>
+            <a
+              href="https://www.marist.edu/social-behavioral-science/faculty/stacy-williams"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline underline-offset-2 transition-colors duration-200"
+            >
+              Associate Professor of Psychology
+            </a>
+            {' | Marist University'}
+          </>
+        }
         title={
           <>
             Dr. Stacy<br />
@@ -90,7 +116,18 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="section-heading">{t('about_heading')}</h2>
-            <p className="text-navy-700 leading-relaxed text-base mb-4">{t('about_body')}</p>
+            <p className="text-navy-700 leading-relaxed text-base mb-4">
+              Dr. Stacy A.S. Williams is an{' '}
+              <a
+                href="https://www.marist.edu/social-behavioral-science/faculty/stacy-williams"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy-700 underline underline-offset-2 hover:text-navy-900 transition-colors duration-200"
+              >
+                Associate Professor of Psychology
+              </a>
+              {' '}at Marist University, a licensed psychologist, and a certified school psychologist. She is a nationally recognized expert in school psychology, Multi-Tiered Systems of Supports (MTSS), and Response to Intervention (RTI).
+            </p>
             <p className="text-navy-600 leading-relaxed text-base">
               Her work centers on systems-level consultation and classroom-based strategies
               designed to foster supportive, high-quality learning environments, with a deep
