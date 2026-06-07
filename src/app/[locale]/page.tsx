@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/ui/hero-section-2';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);
-  return { title: 'Home' };
+  return { title: 'Stacy S.A. Williams, PhD, LP' };
 }
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
