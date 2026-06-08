@@ -8,48 +8,48 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return { title: t('page_title') };
 }
 
-// Google Drive links preserved from original site
+// ── Real Google Drive links scraped from stacywilliamsphd.com/poems-of-the-heart.html ──
+
 const wrestlingPoems = [
-  { title: 'Faith', href: 'https://drive.google.com/file/d/1_faith_poem' },
-  { title: 'Fix it Jesus', href: 'https://drive.google.com/file/d/1_fixitjesus_poem' },
-  { title: 'Hope is Resistance', href: 'https://drive.google.com/file/d/1_hope_poem' },
-  { title: 'Letting Go', href: 'https://drive.google.com/file/d/1_lettinggo_poem' },
-  { title: 'We Shall Overcome', href: 'https://drive.google.com/file/d/1_overcome_poem' },
-  { title: 'Dissonance', href: 'https://drive.google.com/file/d/1_dissonance_poem' },
-  { title: 'The Struggle', href: 'https://drive.google.com/file/d/1_struggle_poem' },
-  { title: 'Still I Rise', href: 'https://drive.google.com/file/d/1_stillirise_poem' },
-  { title: 'Inner Peace', href: 'https://drive.google.com/file/d/1_innerpeace_poem' },
-  { title: 'Unbroken', href: 'https://drive.google.com/file/d/1_unbroken_poem' },
-  { title: 'Chosen', href: 'https://drive.google.com/file/d/1_chosen_poem' },
+  { title: 'Faith',                        href: 'https://drive.google.com/file/d/1JZENulQZ0lVX0h7nqHzfbb95CHfCf0Rx/view?usp=sharing' },
+  { title: 'Fix it Jesus',                  href: 'https://drive.google.com/file/d/1p5l6pwfBAXP2FGTW0E21QuHFTOMu3Zpw/view?usp=sharing' },
+  { title: 'Food For Thought',              href: 'https://drive.google.com/file/d/1NjkMfmK239IJnwKa2NJWArANud3F4N59/view?usp=sharing' },
+  { title: 'Hope is Resistance',            href: 'https://drive.google.com/file/d/1UNUK6bunewBpF9OrZKfQTFSlRK07NzYL/view?usp=sharing' },
+  { title: "It's not all in your head",    href: 'https://drive.google.com/file/d/13haXebYcxg3QRom1sn7rwKmahScRwAmm/view?usp=sharing' },
+  { title: 'Letting Go',                    href: 'https://drive.google.com/file/d/1cAV7j7NAWegb-bS3xfn2-Kn0-PqyE539/view?usp=sharing' },
+  { title: 'Liberte, Egalite, Fraternite', href: 'https://drive.google.com/file/d/1k-s8PYaHHIWzySzpSGkzb9tlVamRPg0M/view?usp=sharing' },
+  { title: 'Perfection',                    href: 'https://drive.google.com/file/d/1hFOgZGblqoak2QZq12JmDo_HYhjQJIvz/view?usp=sharing' },
+  { title: 'Suffocation',                   href: 'https://drive.google.com/file/d/1hFOgZGblqoak2QZq12JmDo_HYhjQJIvz/view?usp=sharing' },
+  { title: 'Tap-In',                        href: 'https://drive.google.com/file/d/1hAPPdDQweo7zAkm3i0KsS7_3SAJMkSaR/view?usp=sharing' },
+  { title: 'Twilight Zone',                 href: 'https://drive.google.com/file/d/1k1KZDEK9tcqF-1P4aK3RZzugyyuKfbgc/view?usp=sharing' },
+  { title: 'We Shall Overcome',             href: 'https://drive.google.com/file/d/1cW1NmLzRueJmYVIh1qXQ_76FSJrbAWav/view?usp=sharing' },
 ];
 
 const lovePoems = [
-  { title: 'Eternal Love', href: 'https://drive.google.com/file/d/1_eternallove_poem' },
-  { title: 'The Dance', href: 'https://drive.google.com/file/d/1_thedance_poem' },
-  { title: 'In Your Embrace', href: 'https://drive.google.com/file/d/1_embrace_poem' },
-  { title: 'Destiny', href: 'https://drive.google.com/file/d/1_destiny_poem' },
-  { title: 'Chance Encounters', href: 'https://drive.google.com/file/d/1_chance_poem' },
-  { title: 'You and I', href: 'https://drive.google.com/file/d/1_youandi_poem' },
-  { title: 'Whisper', href: 'https://drive.google.com/file/d/1_whisper_poem' },
-  { title: 'Forever', href: 'https://drive.google.com/file/d/1_forever_poem' },
-  { title: 'First Light', href: 'https://drive.google.com/file/d/1_firstlight_poem' },
-  { title: 'Devotion', href: 'https://drive.google.com/file/d/1_devotion_poem' },
-  { title: 'Soulmates', href: 'https://drive.google.com/file/d/1_soulmates_poem' },
-  { title: 'Midnight', href: 'https://drive.google.com/file/d/1_midnight_poem' },
-  { title: 'Promise', href: 'https://drive.google.com/file/d/1_promise_poem' },
-  { title: 'Grace', href: 'https://drive.google.com/file/d/1_grace_poem' },
-  { title: 'Home', href: 'https://drive.google.com/file/d/1_home_poem' },
-  { title: 'Sunrise', href: 'https://drive.google.com/file/d/1_sunrise_poem' },
-  { title: 'Gentle', href: 'https://drive.google.com/file/d/1_gentle_poem' },
-  { title: 'Wonder', href: 'https://drive.google.com/file/d/1_wonder_poem' },
-  { title: 'Tenderness', href: 'https://drive.google.com/file/d/1_tenderness_poem' },
-  { title: 'Beloved', href: 'https://drive.google.com/file/d/1_beloved_poem' },
-  { title: 'Together', href: 'https://drive.google.com/file/d/1_together_poem' },
+  { title: 'A Full Heart',        href: 'https://drive.google.com/file/d/1O3CV3Y7DrQJrGFg-Yfe3lyu7c_3heCIJ/view?usp=sharing' },
+  { title: 'Chance Encounters',   href: 'https://drive.google.com/file/d/1_YUqZRmNxwchTeDmcQbFd6eqrVRhRULL/view?usp=sharing' },
+  { title: 'Destiny',             href: 'https://drive.google.com/file/d/1874jGig9CmSLRK-YvWo7uR0ol-s-yNOT/view?usp=sharing' },
+  { title: 'Dream Land',          href: 'https://drive.google.com/file/d/1zj-AJEdzieH90FZELwVPgsNPjpb1wiDq/view?usp=sharing' },
+  { title: 'Eternal Love',        href: 'https://drive.google.com/file/d/1PAAe5ybcxszp_w92x0l-01ocEp2E31yZ/view?usp=sharing' },
+  { title: 'Experiencing You',    href: 'https://drive.google.com/file/d/1q6jknGNjbt-Bw6waKj-ACDv1bhIluJFq/view?usp=sharing' },
+  { title: 'Gazing',              href: 'https://drive.google.com/file/d/1m5KhLCXbkGjlD3gcNXhbc6hXiaQMiUDK/view?usp=sharing' },
+  { title: 'Happy',               href: 'https://drive.google.com/file/d/1F04WUzgSzJULKDtynoyr4H-VTnoWKAXY/view?usp=sharing' },
+  { title: 'Happy MomDada Day',   href: 'https://drive.google.com/file/d/1GyfUJqRD96ZL-jkEvyVYwiUonU7l58Ew/view?usp=sharing' },
+  { title: 'I Adore Love',        href: 'https://drive.google.com/file/d/1zmrxDyYkEx-B0QPo6px8tXQcKZyqLQQH/view?usp=sharing' },
+  { title: "In Time's Embrace",  href: 'https://drive.google.com/file/d/1a8aKvFmZoYhDH93anvEOnFO3-2EaU3rH/view?usp=sharing' },
+  { title: 'In Your Embrace',     href: 'https://drive.google.com/file/d/1gapqrODE9xVpqLkbwl2S26onYySfS5xt/view?usp=sharing' },
+  { title: 'My Prayer',           href: 'https://drive.google.com/file/d/1RseSNkR6RdkbJ1bTD7fhXKYtf4pOo5w4/view?usp=sharing' },
+  { title: 'Peace',               href: 'https://drive.google.com/file/d/1mvtaBOTse58TCSUzoy7B5plxazvqwVtV/view?usp=sharing' },
+  { title: 'The Dance',           href: 'https://drive.google.com/file/d/1oo6zvyNftEm_1sSMWf8kaLaTCpU0aAGw/view?usp=sharing' },
+  { title: 'The Memory of You',   href: 'https://drive.google.com/file/d/1lQDUupoPdwat6pLGFgewL_l6I9Ttabcs/view?usp=sharing' },
+  { title: 'Through Your Eyes',   href: 'https://drive.google.com/file/d/15VP-eZ9p-fR_WuQ9DJL625sakSSIfmJq/view?usp=sharing' },
+  { title: 'Trust Your Instinct', href: 'https://drive.google.com/file/d/1hpNgHyYYvOK6m9KTLz_Rv4_CcMcNCF6N/view?usp=sharing' },
+  { title: 'Your Eyes',           href: 'https://drive.google.com/file/d/1nTn8ICnZLfOfWWxAcjW7Nkw0_A3nSmuc/view?usp=sharing' },
 ];
 
 const celebratingPoems = [
-  { title: 'A Toast To George', href: 'https://drive.google.com/file/d/1_toastgeorge_poem' },
-  { title: 'HBD Queen', href: 'https://drive.google.com/file/d/1_hbdqueen_poem' },
+  { title: 'A Toast To George', href: 'https://drive.google.com/file/d/1MX68qtEwjP2ulH9rBvlV3N-WBqhHbkCx/view?usp=sharing' },
+  { title: 'HBD Queen',         href: 'https://drive.google.com/file/d/18b8p-zbcCD2CWlyiOBau1Uwlwhbm2Jh4/view?usp=sharing' },
 ];
 
 function PoemGrid({ poems, readLabel }: { poems: { title: string; href: string }[]; readLabel: string }) {
@@ -87,7 +87,6 @@ export default function PoemsPage({ params: { locale } }: { params: { locale: st
       </section>
 
       <div className="page-container space-y-14">
-        {/* Author's note */}
         <blockquote className="border-l-4 border-gold-500 pl-6 py-2 max-w-2xl">
           <p className="font-serif text-xl text-navy-700 italic leading-relaxed">{t('intro')}</p>
         </blockquote>
@@ -131,7 +130,7 @@ export default function PoemsPage({ params: { locale } }: { params: { locale: st
         </section>
 
         <p className="text-xs text-navy-400 italic">
-          Note: Poems open in Google Drive. Links will be updated as new works are published.
+          Poems open in Google Drive. Links are sourced directly from stacywilliamsphd.com.
         </p>
       </div>
     </>
