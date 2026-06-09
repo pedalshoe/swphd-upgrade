@@ -13,11 +13,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 // All gallery cards — real images, same hover treatment throughout
 const galleryImages = [
   {
-    src: 'https://www.stacywilliamsphd.com/uploads/1/5/9/9/15999376/editor/saswphd-20250906.jpeg',
+    src: '/portrait/av3a5723b.jpeg',
     alt: 'Dr. Stacy Williams - Portrait',
     caption: 'Portrait',
     theme: 'People',
-    href: null as string | null,
+    href: 'portrait',
   },
   {
     src: '/chatgpt-image-sep-6-2025-10-33-53-pm_orig.png',
@@ -111,7 +111,7 @@ export default function PhotographyPage({ params: { locale } }: { params: { loca
           <h2 className="section-heading">{t('gallery_heading')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            {/* Real images — Portrait + AI-Enhanced Art */}
+            {/* Real images with gallery links where available */}
             {galleryImages.map(({ src, alt, caption, theme, href }) => {
               const inner = (
                 <>
@@ -123,7 +123,7 @@ export default function PhotographyPage({ params: { locale } }: { params: { loca
                       className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/20 transition-colors duration-300" />
-                    {/* "View gallery" badge on the AI card */}
+                    {/* "View gallery" badge on gallery cards */}
                     {href && (
                       <div className="absolute bottom-3 right-3 flex items-center gap-1 bg-navy-800/80 text-white text-xs px-2.5 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         View gallery <ArrowRight size={11} />
