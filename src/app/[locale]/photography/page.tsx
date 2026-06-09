@@ -13,7 +13,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 // All gallery cards — real images, same hover treatment throughout
 const galleryImages = [
   {
-    src: '/portrait/av3a5723b.jpeg',
+    src: '/av3a5723b.jpeg',
     alt: 'Dr. Stacy Williams - Portrait',
     caption: 'Portrait',
     theme: 'People',
