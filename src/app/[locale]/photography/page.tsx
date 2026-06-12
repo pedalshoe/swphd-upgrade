@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Facebook, ArrowRight } from 'lucide-react';
+import { Instagram, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);
@@ -85,6 +85,16 @@ export default function PhotographyPage({ params: { locale } }: { params: { loca
         {/* Social links */}
         <div className="flex flex-wrap gap-4">
           <a
+            href="https://x.com/Scheeatow"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 btn-outline text-sm"
+            aria-label="Follow Scheeatow on X"
+          >
+            <Twitter size={16} />
+            @Scheeatow on X
+          </a>
+          <a
             href="https://www.instagram.com/najiimages"
             target="_blank"
             rel="noopener noreferrer"
@@ -95,14 +105,14 @@ export default function PhotographyPage({ params: { locale } }: { params: { loca
             @najiimages on Instagram
           </a>
           <a
-            href="https://www.facebook.com/najiimages"
+            href="https://www.linkedin.com/in/stacy-williams-9380982/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 btn-outline text-sm"
-            aria-label="Follow najiimages on Facebook"
+            aria-label="View Dr. Stacy Williams on LinkedIn"
           >
-            <Facebook size={16} />
-            najiimages on Facebook
+            <Linkedin size={16} />
+            Dr. Stacy Williams on LinkedIn
           </a>
         </div>
 
@@ -164,7 +174,7 @@ export default function PhotographyPage({ params: { locale } }: { params: { loca
           </div>
 
           <p className="mt-6 text-sm text-navy-400 italic">
-            Visit Dr. Williams' Instagram and Facebook pages at @najiimages for the full gallery.
+            Visit Dr. Williams on X, Instagram, and LinkedIn for more updates and photography.
           </p>
         </section>
 

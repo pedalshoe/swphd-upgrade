@@ -61,10 +61,10 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
               <h2 className="font-serif text-xl text-navy-800 mb-5">Social Media</h2>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://twitter.com/saswphd" target="_blank" rel="noopener noreferrer"
+                  <a href="https://x.com/Scheeatow" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 text-sm text-navy-600 hover:text-navy-800 transition-colors duration-200 cursor-pointer">
                     <Twitter size={16} className="text-gold-500" />
-                    Twitter / X
+                    X (@Scheeatow)
                   </a>
                 </li>
                 <li>
@@ -75,7 +75,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/in/stacy-williams-phd" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.linkedin.com/in/stacy-williams-9380982/" target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-3 text-sm text-navy-600 hover:text-navy-800 transition-colors duration-200 cursor-pointer">
                     <Linkedin size={16} className="text-gold-500" />
                     LinkedIn

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { Twitter, Instagram, Linkedin, Facebook, Camera } from 'lucide-react';
+import { Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations();
@@ -21,8 +21,8 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      href: 'https://twitter.com/saswphd',
-      label: 'Twitter / X',
+      href: 'https://x.com/Scheeatow',
+      label: 'X (@Scheeatow)',
       icon: <Twitter size={18} />,
     },
     {
@@ -31,14 +31,9 @@ export default function Footer() {
       icon: <Instagram size={18} />,
     },
     {
-      href: 'https://www.linkedin.com/in/stacy-williams-phd',
+      href: 'https://www.linkedin.com/in/stacy-williams-9380982/',
       label: 'LinkedIn',
       icon: <Linkedin size={18} />,
-    },
-    {
-      href: 'https://www.facebook.com/najiimages',
-      label: 'Facebook (najiimages)',
-      icon: <Facebook size={18} />,
     },
   ];
 
