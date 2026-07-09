@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-async function verifyHcaptcha(token: string): Promise<boolean> {
-  const secret = process.env.HCAPTCHA_SECRET_KEY;
+async function verifyRecaptcha(token: string): Promise<boolean> {
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
   if (!secret) return false;
 
-  const res = await fetch('https://hcaptcha.com/siteverify', {
+  const res = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: new URLSearchParams({ secret, response: token }),
@@ -35,8 +35,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
     }
 
-    // Verify hCaptcha
-    const captchaValid = await verifyHcaptcha(captchaToken);
+    // Verify Google reCAPTCHA
+    const captchaValid = await verifyRecaptcha(captchaToken);
     if (!captchaValid) {
       return NextResponse.json({ error: 'CAPTCHA verification failed' }, { status: 400 });
     }

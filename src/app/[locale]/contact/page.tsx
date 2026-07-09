@@ -12,6 +12,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 export default function ContactPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);
   const t = useTranslations('contact');
+  const envMode = process.env.ENV ?? 'LOCAL';
 
   return (
     <>
@@ -27,7 +28,7 @@ export default function ContactPage({ params: { locale } }: { params: { locale: 
           {/* Form */}
           <div className="lg:col-span-2">
             <p className="text-navy-700 text-lg leading-relaxed mb-8">{t('intro')}</p>
-            <ContactForm />
+            <ContactForm envMode={envMode} />
           </div>
 
           {/* Sidebar */}

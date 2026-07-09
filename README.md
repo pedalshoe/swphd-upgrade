@@ -12,7 +12,7 @@ A modernized, multilingual portfolio site for **Dr. Stacy A.S. Williams**, Assoc
 | Styling | [Tailwind CSS](https://tailwindcss.com) + shadcn/ui design tokens |
 | i18n | [next-intl](https://next-intl-docs.vercel.app) — English, French, Spanish, Italian |
 | Animation | [Framer Motion](https://www.framer-motion.com) |
-| Contact form | [Resend](https://resend.com) (email delivery) + [hCaptcha](https://www.hcaptcha.com) (spam protection) |
+| Contact form | [Resend](https://resend.com) (email delivery) + [Google reCAPTCHA](https://www.google.com/recaptcha/about/) (spam protection) |
 | UI components | shadcn/ui pattern (`src/components/ui/`) |
 | Deployment | [Vercel](https://vercel.com) |
 | Node | 22.22.2 (see `.nvmrc`) |
@@ -31,7 +31,7 @@ A modernized, multilingual portfolio site for **Dr. Stacy A.S. Williams**, Assoc
 | `/en/photography` | Photography gallery overview |
 | `/en/photography/ai-enhanced-art` | Full gallery of AI-enhanced artwork (39 images) |
 | `/en/poems` | Poems of the Heart — three collections linking to Google Drive |
-| `/en/contact` | Contact form with hCaptcha + office info |
+| `/en/contact` | Contact form with Google reCAPTCHA + office info |
 
 All pages are statically pre-rendered in 4 locales: `en`, `fr`, `es`, `it` (40 total routes).
 
@@ -96,7 +96,7 @@ npm install
 
 # Copy environment variable template
 cp .env.local.example .env.local
-# Edit .env.local and fill in your Resend + hCaptcha keys
+# Edit .env.local and fill in your Resend + reCAPTCHA keys
 
 # Start the development server
 npm run dev
@@ -120,10 +120,11 @@ Copy `.env.local.example` to `.env.local` and fill in:
 | Variable | Where to get it | Required |
 |----------|----------------|----------|
 | `RESEND_API_KEY` | [resend.com](https://resend.com) — free tier: 3,000 emails/month | Yes (contact form) |
-| `NEXT_PUBLIC_HCAPTCHA_SITE_KEY` | [hcaptcha.com](https://www.hcaptcha.com) | Yes (contact form) |
-| `HCAPTCHA_SECRET_KEY` | [hcaptcha.com](https://www.hcaptcha.com) | Yes (contact form) |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | [Google reCAPTCHA](https://www.google.com/recaptcha/admin) | Yes (contact form) |
+| `RECAPTCHA_SECRET_KEY` | [Google reCAPTCHA](https://www.google.com/recaptcha/admin) | Yes (contact form) |
+| `ENV` | Use `PROD` in production; `LOCAL`, `TEST`, and `DEV` show testing notices | Recommended |
 
-The default keys in `.env.local.example` are hCaptcha's public test keys — the form UI works locally without real keys, but emails will not send.
+The default keys in `.env.local.example` are Google's public reCAPTCHA test keys. They are safe for local development and should be replaced with real keys in deployed environments.
 
 ---
 
@@ -131,7 +132,8 @@ The default keys in `.env.local.example` are hCaptcha's public test keys — the
 
 1. Push this repo to GitHub
 2. Import at [vercel.com/new](https://vercel.com/new)
-3. Add the three environment variables in the Vercel dashboard
+3. Add the environment variables in the Vercel dashboard:
+   `RESEND_API_KEY`, `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`, `RECAPTCHA_SECRET_KEY`, and `ENV=PROD`
 4. Deploy — live in under 2 minutes
 
 **Hosting cost:** Vercel's free Hobby tier handles this site's traffic with no charges.
@@ -182,7 +184,7 @@ For Weebly: multilingual support requires the **Weglot** plugin (~$17/month). Se
 ## Platform Migration Notes
 
 See **`WEEBLY-GUIDE.md`** for:
-- Weebly contact form setup with hCaptcha
+- Weebly contact form setup with reCAPTCHA
 - Sticky navigation CSS for Weebly
 - Platform alternatives (Squarespace, Wix, Webflow, Framer) at the same price point
 - Step-by-step migration strategy from Weebly
@@ -194,7 +196,7 @@ See **`WEEBLY-GUIDE.md`** for:
 ```
 User submits form
       ↓
-hCaptcha token verified server-side (POST /api/contact)
+Google reCAPTCHA token verified server-side (POST /api/contact)
       ↓
 Resend delivers email to Stacy.Williams@marist.edu
 with reply-to set to the sender's address

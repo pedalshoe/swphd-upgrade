@@ -1,20 +1,28 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslations } from 'next-intl';
-import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, ShieldCheck } from 'lucide-react';
 import clsx from 'clsx';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
+const DEFAULT_RECAPTCHA_SITE_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 
-export default function ContactForm() {
+interface ContactFormProps {
+  envMode?: string;
+}
+
+export default function ContactForm({ envMode = 'LOCAL' }: ContactFormProps) {
   const t = useTranslations('contact');
-  const captchaRef = useRef<HCaptcha>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
 
   const [status, setStatus] = useState<Status>('idle');
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? DEFAULT_RECAPTCHA_SITE_KEY;
+  const normalizedEnv = envMode.toUpperCase();
+  const showCaptchaNotice = ['LOCAL', 'TEST', 'DEV'].includes(normalizedEnv);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -37,7 +45,7 @@ export default function ContactForm() {
         setStatus('success');
         setForm({ name: '', email: '', subject: '', message: '' });
         setCaptchaToken(null);
-        captchaRef.current?.resetCaptcha();
+        captchaRef.current?.reset();
       } else {
         setStatus('error');
       }
@@ -124,18 +132,45 @@ export default function ContactForm() {
         />
       </div>
 
-      {/* hCaptcha */}
+      {/* Google reCAPTCHA */}
       <div>
-        <HCaptcha
+        <ReCAPTCHA
           ref={captchaRef}
-          sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY ?? '10000000-ffff-ffff-ffff-000000000001'}
-          onVerify={(token) => setCaptchaToken(token)}
-          onExpire={() => setCaptchaToken(null)}
+          sitekey={siteKey}
+          onChange={(token) => setCaptchaToken(token)}
+          onExpired={() => setCaptchaToken(null)}
           theme="light"
         />
         <p className="text-xs text-navy-400 mt-1.5">
-          This form is protected by hCaptcha to prevent automated submissions.
+          This site is protected by reCAPTCHA and the Google{' '}
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-navy-600"
+          >
+            Privacy Policy
+          </a>{' '}
+          and{' '}
+          <a
+            href="https://policies.google.com/terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-navy-600"
+          >
+            Terms of Service
+          </a>{' '}
+          apply.
         </p>
+        {showCaptchaNotice && (
+          <div className="mt-2 flex items-start gap-2 rounded border border-gold-200 bg-gold-50 px-3 py-2 text-xs text-navy-600">
+            <ShieldCheck size={14} className="mt-0.5 flex-shrink-0 text-gold-600" />
+            <p>
+              reCAPTCHA is running with test-mode keys in this environment. Use
+              production keys in Vercel with `ENV=PROD` to hide this message.
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Status messages */}
