@@ -36,10 +36,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Verify Google reCAPTCHA
-    const captchaValid = await verifyRecaptcha(captchaToken);
+    /*const captchaValid = await verifyRecaptcha(captchaToken);
     if (!captchaValid) {
       return NextResponse.json({ error: 'CAPTCHA verification failed' }, { status: 400 });
-    }
+    }*/
 
     // Send email via Resend (instantiated here so env var is read at request time)
     const resend = new Resend(process.env.RESEND_API_KEY);
